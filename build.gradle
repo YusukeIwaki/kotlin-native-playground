@@ -1,0 +1,11 @@
+plugins {
+  id "org.jetbrains.kotlin.konan" version "1.3.0-rc-146"
+}
+
+konan.targets = ['macos_x64', 'linux_x64', 'mingw_x64']
+
+konanArtifacts {
+  program("app") {
+    enableOptimizations(true)
+  }
+}
